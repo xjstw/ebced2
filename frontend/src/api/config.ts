@@ -2,16 +2,16 @@ import { useAuth } from '../context/AuthContext';
 
 const getBaseUrl = () => {
   // Environment variables'ı logla
-  console.log('VITE_API_URL:', process.env.VITE_API_URL);
-  console.log('NODE_ENV:', process.env.NODE_ENV);
+  console.log('VITE_API_URL:', __VITE_API_URL__);
+  console.log('MODE:', __MODE__);
   
   // Önce VITE_API_URL'i kontrol et
-  if (process.env.VITE_API_URL) {
-    return process.env.VITE_API_URL;
+  if (__VITE_API_URL__) {
+    return __VITE_API_URL__;
   }
   
-  // Fallback olarak NODE_ENV'e göre URL belirle
-  if (process.env.NODE_ENV === 'production') {
+  // Fallback olarak MODE'a göre URL belirle
+  if (__MODE__ === 'production') {
     return 'https://ebced2.onrender.com';
   }
   
