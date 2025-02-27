@@ -10,12 +10,13 @@ export default defineConfig(({ command, mode }) => {
     plugins: [react()],
     define: {
       // Expose .env variables to the frontend
-      __VITE_API_URL__: JSON.stringify(env.VITE_API_URL),
+      __VITE_API_URL__: JSON.stringify(env.VITE_API_URL || ''),
       __MODE__: JSON.stringify(mode)
     },
     server: {
       port: 5173,
-      host: true
+      host: true,
+      cors: true
     }
   }
 })

@@ -2,20 +2,10 @@ import { useAuth } from '../context/AuthContext';
 
 const getBaseUrl = () => {
   // Environment variables'ı logla
-  console.log('VITE_API_URL:', __VITE_API_URL__);
-  console.log('MODE:', __MODE__);
-  
-  // Önce VITE_API_URL'i kontrol et
-  if (__VITE_API_URL__) {
-    return __VITE_API_URL__;
-  }
-  
-  // Fallback olarak MODE'a göre URL belirle
-  if (__MODE__ === 'production') {
-    return 'https://ebced2.onrender.com';
-  }
-  
-  return 'http://localhost:8000';
+  const apiUrl = __VITE_API_URL__ || (__MODE__ === 'production' ? 'https://ebced2.onrender.com' : 'http://localhost:8000');
+  console.log('Current API URL:', apiUrl);
+  console.log('Environment Mode:', __MODE__);
+  return apiUrl;
 };
 
 export const getAuthHeaders = () => {
@@ -63,7 +53,6 @@ const handleApiError = (error: any) => {
 export const api = {
   get: async (endpoint: string) => {
     try {
-      // API URL'ini logla
       const url = `${getBaseUrl()}${endpoint}`;
       console.log('Making GET request to:', url);
       
@@ -71,11 +60,16 @@ export const api = {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
         mode: 'cors',
+        credentials: 'include',
       });
       
+      console.log('Response status:', response.status);
       if (!response.ok) {
+        const errorText = await response.text();
+        console.error('Error response:', errorText);
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       
@@ -88,27 +82,34 @@ export const api = {
   
   post: async (endpoint: string, data: any) => {
     try {
-      // API URL'ini logla
       const url = `${getBaseUrl()}${endpoint}`;
-      console.log('Making POST request to:', url, 'with data:', data);
+      console.log('Making POST request to:', url);
+      console.log('Request data:', data);
       
       const response = await fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
         mode: 'cors',
+        credentials: 'include',
         body: JSON.stringify(data),
       });
       
+      console.log('Response status:', response.status);
       if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        throw new Error(errorData.detail || `HTTP error! status: ${response.status}`);
+        const errorText = await response.text();
+        console.error('Error response:', errorText);
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
       
       return response;
     } catch (error) {
       console.error('API Error:', error);
+      if (error instanceof TypeError && error.message === 'Failed to fetch') {
+        throw new Error('Sunucuya bağlanılamadı. API endpoint\'in erişilebilir olduğundan emin olun.');
+      }
       throw error;
     }
   },
