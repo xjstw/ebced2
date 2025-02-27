@@ -40,36 +40,56 @@ export const makeAuthenticatedRequest = async (endpoint: string, options: Reques
   return response;
 };
 
+// Hata yakalama ve işleme için yardımcı fonksiyon
+const handleApiError = (error: any) => {
+  console.error('API Error:', error);
+  if (error.message === 'Failed to fetch') {
+    throw new Error('Sunucuya bağlanılamadı. Lütfen internet bağlantınızı kontrol edin.');
+  }
+  throw error;
+};
+
 export const api = {
   get: async (endpoint: string) => {
-    const response = await fetch(`${getBaseUrl()}${endpoint}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+    try {
+      const response = await fetch(`${getBaseUrl()}${endpoint}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include',
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      return response;
+    } catch (error) {
+      handleApiError(error);
     }
-    
-    return response;
   },
   
   post: async (endpoint: string, data: any) => {
-    const response = await fetch(`${getBaseUrl()}${endpoint}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+    try {
+      const response = await fetch(`${getBaseUrl()}${endpoint}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include',
+        body: JSON.stringify(data),
+      });
+      
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.detail || `HTTP error! status: ${response.status}`);
+      }
+      
+      return response;
+    } catch (error) {
+      handleApiError(error);
     }
-    
-    return response;
   },
   
   put: (endpoint: string, data: any) => makeAuthenticatedRequest(endpoint, {
