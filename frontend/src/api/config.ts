@@ -1,11 +1,23 @@
 import { useAuth } from '../context/AuthContext';
 
 const getBaseUrl = () => {
-  // Environment variables'ı logla
-  const apiUrl = __VITE_API_URL__ || (__MODE__ === 'production' ? 'https://ebced2.onrender.com' : 'http://localhost:8000');
-  console.log('Current API URL:', apiUrl);
-  console.log('Environment Mode:', __MODE__);
-  return apiUrl;
+  // Debug için tüm environment değişkenlerini logla
+  console.log('Environment Debug:');
+  console.log('VITE_API_URL:', __VITE_API_URL__);
+  console.log('MODE:', __MODE__);
+  console.log('PROD:', __PROD__);
+  console.log('Window Location:', window.location.hostname);
+
+  // Production kontrolü - birden fazla koşulu kontrol et
+  const isProduction = __PROD__ || 
+                      window.location.hostname === 'ebced2.vercel.app' || 
+                      __MODE__ === 'production';
+  
+  console.log('Is Production?', isProduction);
+  const baseUrl = isProduction ? 'https://ebced2.onrender.com' : 'http://localhost:8000';
+  console.log('Using Base URL:', baseUrl);
+  
+  return baseUrl;
 };
 
 export const getAuthHeaders = () => {
