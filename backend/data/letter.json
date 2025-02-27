@@ -1,0 +1,564 @@
+{
+    "harfler": [
+      {
+        "okunusu": "ye",
+        "arapca_harf": "ي",
+        "ebced_sayisi": 10,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "ye",
+        "arapca_harf": "ی",
+        "ebced_sayisi": 10,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "ye",
+        "arapca_harf": "ى",
+        "ebced_sayisi": 10,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "ye",
+        "arapca_harf": "ی",
+        "ebced_sayisi": 10,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "he",
+        "arapca_harf": "ه",
+        "ebced_sayisi": 5,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "A"
+      },
+      {
+        "okunusu": "he",
+        "arapca_harf": "ة",
+        "ebced_sayisi": 5,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "A"
+      },
+      {
+        "okunusu": "he",
+        "arapca_harf": "ۀ",
+        "ebced_sayisi": 5,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "A"
+      },
+      {
+        "okunusu": "he",
+        "arapca_harf": "ﻫ",
+        "ebced_sayisi": 5,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "A"
+      },
+      {
+        "okunusu": "vav",
+        "arapca_harf": "ؤ",
+        "ebced_sayisi": 6,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "vav",
+        "arapca_harf": "ؤ",
+        "ebced_sayisi": 6,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "vav",
+        "arapca_harf": "و",
+        "ebced_sayisi": 6,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "nun",
+        "arapca_harf": "ن",
+        "ebced_sayisi": 50,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "nun",
+        "arapca_harf": "ن‎",
+        "ebced_sayisi": 50,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "mim",
+        "arapca_harf": "م",
+        "ebced_sayisi": 40,
+        "n_z": "N",
+        "cinsiyeti": "D",
+        "elementi": "A"
+      },
+      {
+        "okunusu": "mim",
+        "arapca_harf": "م",
+        "ebced_sayisi": 40,
+        "n_z": "N",
+        "cinsiyeti": "D",
+        "elementi": "A"
+      },
+      {
+        "okunusu": "lam",
+        "arapca_harf": "ل",
+        "ebced_sayisi": 30,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "H"
+      },
+      {
+        "okunusu": "lam",
+        "arapca_harf": "ل‎‎",
+        "ebced_sayisi": 30,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "H"
+      },
+      {
+        "okunusu": "kef",
+        "arapca_harf": "ک",
+        "ebced_sayisi": 20,
+        "n_z": "N",
+        "cinsiyeti": "D",
+        "elementi": "T"
+      },
+      {
+        "okunusu": "kef",
+        "arapca_harf": "گ",
+        "ebced_sayisi": 20,
+        "n_z": "N",
+        "cinsiyeti": "D",
+        "elementi": "T"
+      },
+      {
+        "okunusu": "kef",
+        "arapca_harf": "ك",
+        "ebced_sayisi": 20,
+        "n_z": "N",
+        "cinsiyeti": "D",
+        "elementi": "T"
+      },
+      {
+        "okunusu": "kef",
+        "arapca_harf": "ڭ",
+        "ebced_sayisi": 20,
+        "n_z": "N",
+        "cinsiyeti": "D",
+        "elementi": "T"
+      },
+      {
+        "okunusu": "kef",
+        "arapca_harf": "ك‎",
+        "ebced_sayisi": 20,
+        "n_z": "N",
+        "cinsiyeti": "D",
+        "elementi": "T"
+      },
+      {
+        "okunusu": "kaf",
+        "arapca_harf": "ق",
+        "ebced_sayisi": 100,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "T"
+      },
+      {
+        "okunusu": "kaf",
+        "arapca_harf": "ق",
+        "ebced_sayisi": 100,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "T"
+      },
+      {
+        "okunusu": "fe",
+        "arapca_harf": "ف",
+        "ebced_sayisi": 80,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "A"
+      },
+      {
+        "okunusu": "fe",
+        "arapca_harf": "ف",
+        "ebced_sayisi": 80,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "A"
+      },
+      {
+        "okunusu": "gayn",
+        "arapca_harf": "غ",
+        "ebced_sayisi": 1000,
+        "n_z": "Z",
+        "cinsiyeti": "E",
+        "elementi": "H"
+      },
+      {
+        "okunusu": "gayn",
+        "arapca_harf": "ﻍ",
+        "ebced_sayisi": 1000,
+        "n_z": "Z",
+        "cinsiyeti": "E",
+        "elementi": "H"
+      },
+      {
+        "okunusu": "ayn",
+        "arapca_harf": "ع",
+        "ebced_sayisi": 70,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "H"
+      },
+      {
+        "okunusu": "ayn",
+        "arapca_harf": "ع",
+        "ebced_sayisi": 70,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "H"
+      },
+      {
+        "okunusu": "zı",
+        "arapca_harf": "ظ",
+        "ebced_sayisi": 900,
+        "n_z": "Z",
+        "cinsiyeti": "E",
+        "elementi": "T"
+      },
+      {
+        "okunusu": "zı",
+        "arapca_harf": "ظ",
+        "ebced_sayisi": 900,
+        "n_z": "Z",
+        "cinsiyeti": "E",
+        "elementi": "T"
+      },
+      {
+        "okunusu": "tı",
+        "arapca_harf": "ط",
+        "ebced_sayisi": 9,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "A"
+      },
+      {
+        "okunusu": "tı",
+        "arapca_harf": "ط",
+        "ebced_sayisi": 9,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "A"
+      },
+      {
+        "okunusu": "dad",
+        "arapca_harf": "ض",
+        "ebced_sayisi": 800,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "dad",
+        "arapca_harf": "ض‎",
+        "ebced_sayisi": 800,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "sad",
+        "arapca_harf": "ص",
+        "ebced_sayisi": 90,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "sad",
+        "arapca_harf": "ص",
+        "ebced_sayisi": 90,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "şın",
+        "arapca_harf": "ش",
+        "ebced_sayisi": 300,
+        "n_z": "Z",
+        "cinsiyeti": "E",
+        "elementi": "A"
+      },
+      {
+        "okunusu": "şın",
+        "arapca_harf": "ﺵ‎",
+        "ebced_sayisi": 300,
+        "n_z": "Z",
+        "cinsiyeti": "E",
+        "elementi": "A"
+      },
+      {
+        "okunusu": "sin",
+        "arapca_harf": "س",
+        "ebced_sayisi": 60,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "sin",
+        "arapca_harf": "ﺱ‎",
+        "ebced_sayisi": 60,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "ze",
+        "arapca_harf": "ز",
+        "ebced_sayisi": 7,
+        "n_z": "Z",
+        "cinsiyeti": "E",
+        "elementi": "T"
+      },
+      {
+        "okunusu": "ze",
+        "arapca_harf": "ژ",
+        "ebced_sayisi": 7,
+        "n_z": "Z",
+        "cinsiyeti": "E",
+        "elementi": "T"
+      },
+      {
+        "okunusu": "ze",
+        "arapca_harf": "ز‎",
+        "ebced_sayisi": 7,
+        "n_z": "Z",
+        "cinsiyeti": "E",
+        "elementi": "T"
+      },
+      {
+        "okunusu": "rı",
+        "arapca_harf": "ر",
+        "ebced_sayisi": 200,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "H"
+      },
+      {
+        "okunusu": "rı",
+        "arapca_harf": "ر‎",
+        "ebced_sayisi": 200,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "H"
+      },
+      {
+        "okunusu": "zel",
+        "arapca_harf": "ذ",
+        "ebced_sayisi": 700,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "H"
+      },
+      {
+        "okunusu": "zel",
+        "arapca_harf": "ذ‎",
+        "ebced_sayisi": 700,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "H"
+      },
+      {
+        "okunusu": "dal",
+        "arapca_harf": "د",
+        "ebced_sayisi": 4,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "H"
+      },
+      {
+        "okunusu": "dal",
+        "arapca_harf": "د",
+        "ebced_sayisi": 4,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "H"
+      },
+      {
+        "okunusu": "hı",
+        "arapca_harf": "خ",
+        "ebced_sayisi": 600,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "H"
+      },
+      {
+        "okunusu": "hı",
+        "arapca_harf": "خ",
+        "ebced_sayisi": 600,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "H"
+      },
+      {
+        "okunusu": "ha",
+        "arapca_harf": "ح",
+        "ebced_sayisi": 8,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "H"
+      },
+      {
+        "okunusu": "ha",
+        "arapca_harf": "ح",
+        "ebced_sayisi": 8,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "H"
+      },
+      {
+        "okunusu": "cim",
+        "arapca_harf": "ج",
+        "ebced_sayisi": 3,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "cim",
+        "arapca_harf": "چ",
+        "ebced_sayisi": 3,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "cim",
+        "arapca_harf": "ج",
+        "ebced_sayisi": 3,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "se",
+        "arapca_harf": "ث",
+        "ebced_sayisi": 500,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "se",
+        "arapca_harf": "ﺙ",
+        "ebced_sayisi": 500,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "te",
+        "arapca_harf": "ت",
+        "ebced_sayisi": 400,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "te",
+        "arapca_harf": "ت",
+        "ebced_sayisi": 400,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "be",
+        "arapca_harf": "ﺏ",
+        "ebced_sayisi": 2,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "be",
+        "arapca_harf": "پ",
+        "ebced_sayisi": 2,
+        "n_z": "Z",
+        "cinsiyeti": "D",
+        "elementi": "S"
+      },
+      {
+        "okunusu": "elif",
+        "arapca_harf": "ا",
+        "ebced_sayisi": 1,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "A"
+      },
+      {
+        "okunusu": "elif",
+        "arapca_harf": "آ",
+        "ebced_sayisi": 1,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "A"
+      },
+      {
+        "okunusu": "elif",
+        "arapca_harf": "أ",
+        "ebced_sayisi": 1,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "A"
+      },
+      {
+        "okunusu": "elif",
+        "arapca_harf": "إ",
+        "ebced_sayisi": 1,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "A"
+      },
+      {
+        "okunusu": "elif",
+        "arapca_harf": "ٱ",
+        "ebced_sayisi": 1,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "A"
+      },
+      {
+        "okunusu": "elif",
+        "arapca_harf": "ﺌ",
+        "ebced_sayisi": 1,
+        "n_z": "N",
+        "cinsiyeti": "E",
+        "elementi": "A"
+      }
+    ]
+}

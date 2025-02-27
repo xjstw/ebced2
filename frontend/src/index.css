@@ -1,0 +1,122 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f7fafc;
+}
+
+.arabic-text {
+  font-family: 'Traditional Arabic', 'Amiri', serif;
+  font-size: 1.2em;
+  direction: rtl;
+  text-align: right;
+  margin: 0.5em 0;
+}
+
+.arabic-text strong {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  direction: ltr;
+  float: right;
+  margin-left: 0.5em;
+}
+
+@media print {
+  body {
+    background-color: white !important;
+    font-size: 12pt;
+    color: #000;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-content {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .report-container {
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .header h1 {
+    font-size: 24pt !important;
+    margin-bottom: 10px;
+    color: #000 !important;
+  }
+
+  .info-section {
+    margin-bottom: 30px;
+  }
+
+  .info-section table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .info-section th,
+  .info-section td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .analysis-section {
+    margin-bottom: 30px;
+    page-break-inside: avoid;
+  }
+
+  .analysis-section h2 {
+    font-size: 18pt !important;
+    margin-bottom: 15px;
+    color: #000 !important;
+  }
+
+  .analysis-content {
+    background-color: #f8f9fa !important;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  @page {
+    margin: 2cm;
+    size: A4;
+  }
+
+  /* Sayfa sonlarını kontrol etme */
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+
+  table, figure {
+    page-break-inside: avoid;
+  }
+
+  /* Arapça metin stilleri */
+  [style*="font-family: 'Noto Naskh Arabic'"],
+  [style*="font-family: 'Traditional Arabic'"],
+  [style*="font-family: 'Amiri'"] {
+    font-size: 18pt !important;
+    line-height: 1.5;
+    text-align: right;
+    direction: rtl;
+  }
+}

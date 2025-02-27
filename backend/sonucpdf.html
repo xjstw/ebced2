@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="generator" content="pdf2htmlEX"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .report-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .report-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .report-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .report-section {
+            margin-bottom: 20px;
+        }
+        .report-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        .report-table th, .report-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .report-table th {
+            background-color: #f5f5f5;
+        }
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .report-container {
+                max-width: none;
+                margin: 0;
+                padding: 20mm;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="report-container">
+        <div class="report-header">
+            <h1 class="report-title">Ebced Analiz Raporu</h1>
+            <p>Analiz Tarihi: {{ analysis_date }}</p>
+        </div>
+
+        <div class="report-section">
+            <h2>Metin Bilgileri</h2>
+            <p><strong>Metin:</strong> {{ text }}</p>
+            <p><strong>Toplam Karakter Sayısı:</strong> {{ total_chars }}</p>
+            <p><strong>Toplam Kelime Sayısı:</strong> {{ total_words }}</p>
+        </div>
+
+        <div class="report-section">
+            <h2>Ebced Değerleri</h2>
+            <table class="report-table">
+                <thead>
+                    <tr>
+                        <th>Harf</th>
+                        <th>Sayısal Değer</th>
+                        <th>Tekrar Sayısı</th>
+                        <th>Toplam Değer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for letter in letter_values %}
+                    <tr>
+                        <td>{{ letter.char }}</td>
+                        <td>{{ letter.value }}</td>
+                        <td>{{ letter.count }}</td>
+                        <td>{{ letter.total }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="report-section">
+            <h2>Toplam Değerler</h2>
+            <p><strong>Toplam Ebced Değeri:</strong> {{ total_abjad_value }}</p>
+            <p><strong>Küçük Ebced Değeri:</strong> {{ small_abjad_value }}</p>
+            <p><strong>Büyük Ebced Değeri:</strong> {{ large_abjad_value }}</p>
+        </div>
+
+        {% if additional_info %}
+        <div class="report-section">
+            <h2>Ek Bilgiler</h2>
+            <p>{{ additional_info }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html> 

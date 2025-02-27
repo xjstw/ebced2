@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: ebced-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.0
+      - key: DATABASE_URL
+        sync: false # Bu değişken Render dashboard'dan ayarlanacak
+      - key: JWT_SECRET_KEY
+        sync: false # Bu değişken Render dashboard'dan ayarlanacak
+    cors:
+      - origin: https://ebced.vercel.app # Frontend'in Vercel URL'i
+      - origin: http://localhost:5173 # Geliştirme ortamı için 
