@@ -2,7 +2,7 @@ import { useAuth } from '../context/AuthContext';
 
 const getBaseUrl = () => {
   if (process.env.NODE_ENV === 'production') {
-    return 'https://ebced-api.onrender.com'; // Render'daki backend URL'i
+    return 'https://ebced2.onrender.com'; // Render'daki backend URL'i
   }
   return 'http://localhost:8000'; // Geliştirme ortamı için local URL
 };

@@ -17,5 +17,5 @@ services:
         sync: false # Bu değişken Render dashboard'dan ayarlanacak
     cors:
       origins:
-        - https://ebced.vercel.app # Frontend'in Vercel URL'i
+        - https://ebced2.vercel.app # Frontend'in Vercel URL'i
         - http://localhost:5173 # Geliştirme ortamı için 
