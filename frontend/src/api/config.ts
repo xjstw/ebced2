@@ -1,6 +1,9 @@
 import { useAuth } from '../context/AuthContext';
 
 const getBaseUrl = () => {
+  // NODE_ENV kontrolü
+  console.log('Current NODE_ENV:', process.env.NODE_ENV);
+  
   if (process.env.NODE_ENV === 'production') {
     return 'https://ebced2.onrender.com'; // Render'daki backend URL'i
   }
@@ -52,13 +55,16 @@ const handleApiError = (error: any) => {
 export const api = {
   get: async (endpoint: string) => {
     try {
-      const response = await fetch(`${getBaseUrl()}${endpoint}`, {
+      // API URL'ini logla
+      const url = `${getBaseUrl()}${endpoint}`;
+      console.log('Making GET request to:', url);
+      
+      const response = await fetch(url, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
         },
         mode: 'cors',
-        credentials: 'omit'
       });
       
       if (!response.ok) {
@@ -74,13 +80,16 @@ export const api = {
   
   post: async (endpoint: string, data: any) => {
     try {
-      const response = await fetch(`${getBaseUrl()}${endpoint}`, {
+      // API URL'ini logla
+      const url = `${getBaseUrl()}${endpoint}`;
+      console.log('Making POST request to:', url, 'with data:', data);
+      
+      const response = await fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         mode: 'cors',
-        credentials: 'omit',
         body: JSON.stringify(data),
       });
       
