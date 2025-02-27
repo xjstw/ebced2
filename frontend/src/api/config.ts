@@ -57,7 +57,8 @@ export const api = {
         headers: {
           'Content-Type': 'application/json',
         },
-        credentials: 'include',
+        mode: 'cors',
+        credentials: 'omit'
       });
       
       if (!response.ok) {
@@ -66,7 +67,8 @@ export const api = {
       
       return response;
     } catch (error) {
-      handleApiError(error);
+      console.error('API Error:', error);
+      throw error;
     }
   },
   
@@ -77,7 +79,8 @@ export const api = {
         headers: {
           'Content-Type': 'application/json',
         },
-        credentials: 'include',
+        mode: 'cors',
+        credentials: 'omit',
         body: JSON.stringify(data),
       });
       
@@ -88,7 +91,8 @@ export const api = {
       
       return response;
     } catch (error) {
-      handleApiError(error);
+      console.error('API Error:', error);
+      throw error;
     }
   },
   
