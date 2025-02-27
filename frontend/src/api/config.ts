@@ -1,13 +1,21 @@
 import { useAuth } from '../context/AuthContext';
 
 const getBaseUrl = () => {
-  // NODE_ENV kontrolü
-  console.log('Current NODE_ENV:', process.env.NODE_ENV);
+  // Environment variables'ı logla
+  console.log('VITE_API_URL:', import.meta.env.VITE_API_URL);
+  console.log('NODE_ENV:', import.meta.env.NODE_ENV);
   
-  if (process.env.NODE_ENV === 'production') {
-    return 'https://ebced2.onrender.com'; // Render'daki backend URL'i
+  // Önce VITE_API_URL'i kontrol et
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL;
   }
-  return 'http://localhost:8000'; // Geliştirme ortamı için local URL
+  
+  // Fallback olarak NODE_ENV'e göre URL belirle
+  if (import.meta.env.NODE_ENV === 'production') {
+    return 'https://ebced2.onrender.com';
+  }
+  
+  return 'http://localhost:8000';
 };
 
 export const getAuthHeaders = () => {
