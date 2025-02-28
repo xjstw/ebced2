@@ -6,7 +6,7 @@
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "15mb",
-        "buildCommand": "chmod +x api/build.sh && ./api/build.sh"
+        "buildCommand": "chmod +x api/build.sh && ./api/build.sh && pip install -r api/requirements.txt"
       }
     }
   ],
@@ -16,8 +16,14 @@
       "dest": "/api/index.py"
     },
     {
-      "src": "/(.*)",
+      "src": "/((?!api/.*).*)",
       "dest": "/api/index.py"
     }
-  ]
+  ],
+  "functions": {
+    "api/index.py": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  }
 } 
