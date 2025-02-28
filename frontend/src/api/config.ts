@@ -1,8 +1,8 @@
 import { useAuth } from '../context/AuthContext';
 
 const getBaseUrl = () => {
-  // Direkt production URL'i kullan
-  const baseUrl = 'https://ebced2.onrender.com';
+  // Vercel'de API endpoint'i
+  const baseUrl = '/api';
   console.warn('API URL:', baseUrl);
   return baseUrl;
 };
