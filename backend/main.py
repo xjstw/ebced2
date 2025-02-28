@@ -84,7 +84,7 @@ async def get_openapi(credentials: HTTPBasicCredentials = Depends(verify_docs_cr
 # CORS ayarları
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://ebced2.vercel.app", "http://localhost:5173"],
+    allow_origins=["https://ebced2-8gt3.vercel.app", "http://localhost:5173"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
